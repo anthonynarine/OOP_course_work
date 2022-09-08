@@ -41,6 +41,7 @@ class Employee:
             print ("unknown level")
 
     def promote(self):
+        """Method to promote an employee"""
         if self._level == "junior":
              self._level = "senior"
         elif self._level == "senior":
@@ -59,5 +60,23 @@ print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {
 
 e1.promote()
 print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {e1._compute_salary()}, Level is: {e1._get_level()}, ID is: {id(e1)}\n")
-        
 
+e1.promote()
+print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {e1._compute_salary()}, Level is: {e1._get_level()}, ID is: {id(e1)}\n")
+
+
+
+
+#                       ~notes~
+   """""Python will not prevent the end user from accessing methods or attributes you make private. 
+So the moral of the story here is you as a programmer, you're going to be at one side of the table.
+You're either the end user of other libraries or you are designing a library yourself.
+And most of the time you're playing both roles at the same time. So think about this.
+When you are designing a class, think about what the interface between you and the users of your class
+is going to be. Think about the methods that you want to expose to them and the methods that you don't want to expose
+to them. Think about the attributes that you want to expose to them and the attributes that you don't want to
+expose to them.For the four things that are private to your class that you don't want to expose to them, make sure
+that the names start with one underscore, OK, this is if you are the class designer, if you are someone
+who are using other people's libraries, if you feel tempted to use private methods or private attributes,
+think twice about it, because they are private for a reason.
+You're not supposed to access them directly."""     
