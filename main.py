@@ -1,8 +1,4 @@
 
-
-from typing_extensions import Self
-
-
 print (" \n" + "Learning OOP concepts in Python" "\n")
 
 
@@ -44,23 +40,24 @@ class Employee:
         else:
             print ("unknown level")
 
-    def promote (self):
+    def promote(self):
         if self._level == "junior":
              self._level = "senior"
         elif self._level == "senior":
             self._level = "CEO"
-        self._compute_salary()
+        self._salary = self._compute_salary()
 
 
         
 
-e1 = Employee ("Anthony", 38, "senior")
+e1 = Employee ("Anthony", 38, "junior")
 e2 = Employee ("Jessica", 39, "CEO")
 
-print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {e1._compute_salary()}, Level is: {e1._get_level()}, ID is: {id(e1)}\n")
 print (f"Employee name is: {e2.get_name()}, Age is: {e2.get_age()}, Salary is: {e2._compute_salary()},  Level is: {e2._get_level()}, ID is: {id(e2)}\n")
+print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {e1._compute_salary()}, Level is: {e1._get_level()}, ID is: {id(e1)}\n")
 
 
-
+e1.promote()
+print (f"Employee name is: {e1.get_name()}, Age is: {e1.get_age()}, Salary is: {e1._compute_salary()}, Level is: {e1._get_level()}, ID is: {id(e1)}\n")
         
 
